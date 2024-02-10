@@ -1,0 +1,483 @@
+
+/*** 
+
+====================================================================
+Reset
+====================================================================
+
+***/
+
+*{
+    margin:0px;
+    padding:0px;
+    border:none;
+    outline:none;
+    font-size: 100%;
+}
+
+:root {
+  --theme-color1: #003733; /* Dark Green*/
+  --theme-color2: #93bb57; /* Parrot*/
+  --theme-color3: #E7C873; /* Orange*/
+  --theme-color4: #b3c2c1; /* gray*/
+
+  --bg-theme-color1: #003733; /* Dark Green*/
+  --bg-theme-color2: #93bb57; /* Parrot*/
+  --bg-theme-color3: #E7C873; /* Orange*/
+  --bg-theme-color4: #b3c2c1; /* gray*/
+
+  --border-theme-color1: #003733; /* Dark Green*/
+  --border-theme-color2: #93bb57; /* Parrot*/
+  --border-theme-color3: #d1af4b; /* Orange*/
+  --border-theme-color4: #b3c2c1; /* gray*/
+  --sans-serif: 'Manrope', sans-serif;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin vertical-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@mixin absolute-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@mixin absolute-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin absolute-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@mixin background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+::-webkit-input-placeholder{color: #819291;}
+::-moz-input-placeholder{color: #819291;}
+::-ms-input-placeholder{color: #819291;}
+
+
+/*** 
+
+====================================================================
+Global Settings
+====================================================================
+
+***/
+
+body {
+
+    font-size:14px;
+    color: var(--theme-color1);
+    line-height: 28px;
+    font-weight:400;
+    background:#ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+    cursor:pointer;
+}
+
+a:hover,
+a:focus,
+a:visited{
+    text-decoration:none;
+    outline:none;
+}
+
+a:hover{
+    color: inherit;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    position:relative;
+    font-weight:normal;
+    margin:0px;
+    background:none;
+    line-height:1.2em;
+    color: var(--theme-color1);
+    letter-spacing: -.03em;
+    font-family: var(--sans-serif);
+}
+
+h1{
+    font-size: 72px;
+}
+
+h2{
+    font-size: 42px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 24px;
+}
+
+h5{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+h6{
+    font-size: 18px;
+}
+
+textarea{
+    overflow:hidden;    
+    resize: none;
+}
+
+button{
+    outline: none !important;
+    cursor: pointer;
+}
+
+p,.text{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--theme-color1);
+    margin: 0;
+}
+
+.colored{
+    color: var(--theme-color1);
+}
+
+
+.auto-container{
+    position:static;
+    max-width:1400px;
+    padding:0px 15px;
+    margin:0 auto;
+}
+
+.small-container{
+    position:static;
+    max-width:1000px;
+    padding:0px 15px;
+    margin:0 auto;
+}
+
+.large-container{
+    position:static;
+    max-width: 1610px;
+    padding:0px 15px;
+    margin:0 auto;
+}
+
+.page-wrapper{
+    position:relative;
+    margin:0 auto;
+    width:100%;
+    min-width:300px;
+    overflow: hidden;
+    z-index: 99;
+    background-color: #ffffff;
+}
+
+ul,li{
+    list-style:none;
+    padding:0px;
+    margin:0px; 
+}
+
+/*=== List Style One ===*/
+
+.list-style-one{
+    position: relative;
+}
+
+.list-style-one li{
+    position: relative;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    padding-left: 25px;
+    color: var(--bg-theme-color1);
+    margin-bottom: 10px;
+
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 1px;
+        font-size: 14px;
+        color: var(--bg-theme-color3);
+        line-height: 26px;
+        content: "\f058";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+    }
+}
+
+/*Social Icon One*/
+
+.social-icon-one{
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+        position:relative;
+        margin-right: 25px;
+        &:last-child{
+            margin-right: 0;
+        }
+        a{
+            position:relative;
+            display:block;
+            line-height: 40px;
+            text-align: center;
+            font-size:15px;
+            color: #ffffff;
+            border-radius: 50%;
+            -webkit-transition:all 300ms ease;
+            -o-transition:all 300ms ease;
+            transition:all 300ms ease;  
+            
+            &:hover{
+                color: var(--theme-color3);
+            }
+        }   
+    }
+}
+
+
+
+/*Social Icon Two*/
+
+.social-icon-two{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    li {
+        position: relative;
+        display: flex;
+        margin-bottom: 10px;
+        a {
+            position: relative;
+            display: block;
+            line-height: 30px;
+            text-align: center;
+            font-size: 15px;
+            color: #ffffff;
+            border-radius: 50%;
+            -webkit-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+
+            &:hover {
+                color: var(--theme-color3);
+            }
+        }
+    }
+}
+
+/*Social Icon Three*/
+
+.social-icon-three{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.social-icon-three li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.social-icon-three li a {
+    position: relative;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #2f3529;
+    border-radius: 50%;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.social-icon-three li a:hover {
+    color: var(--theme-color2);
+}
+
+.theme_color{
+    color:#25262c;
+}
+
+.pull-right{
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+
+.preloader{ 
+    position:fixed; 
+    left:0px; 
+    top:0px; 
+    width:100%; 
+    height:100%; 
+    z-index:999999; 
+    background-color:#ffffff; 
+} 
+
+.preloader:after{ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+    margin-top: -60px;
+    background-position:center center; 
+    background-repeat:no-repeat; 
+    background-image:url(../images/icons/preloader.gif);
+    background-size: 64px;
+    content: "";
+}
+
+.preloader:before{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: var(--theme-color1);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    content: "Loading";
+    text-transform: uppercase;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+
+img{
+    display:inline-block;
+    max-width:100%;
+    height:auto;    
+}
+
+.tabs-box{
+    position: relative;
+}
+
+.tabs-box .tab{
+    display: none;
+}
+
+.tabs-box .active-tab{
+    display: block;
+}
+
+
+
+
+/*Social Icon Two*/
+.social-icon-three{
+    position: relative;
+    align-items: center;
+    li {
+        position: relative;
+        margin-left: 0px;
+        &.title {
+            color: #FFF;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px; /* 147.368% */
+            margin-right: 12px;
+        }
+        a {
+            position: relative;
+            display: block;
+            height: 42px;
+            width: 42px;
+            line-height: 42px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+            transition: all 300ms ease;
+            i{
+                position: relative;
+            }
+            &::before{
+                @include overlay;
+                transform: scale(0);
+                background-color: var(--Color-3, #FFF);
+                border-radius: 50%;
+                opacity: 0.07;
+                content: "";
+                transition: all 300ms ease;
+            }
+            &:hover {
+                color: #fff;
+                &:before{
+                    transform: scale(1)
+                };
+            }
+        }
+    }
+}

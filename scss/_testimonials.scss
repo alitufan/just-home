@@ -1,0 +1,161 @@
+/*** 
+
+====================================================================
+	Testimonial Section
+====================================================================
+
+***/
+
+.testimonial-section {
+    position: relative;
+    padding: 120px 0 90px;
+    border-bottom: 2px solid #EBEBEB;
+    .dotted-map{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/icons/dotted-map-2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .carousel-outer {
+        position: relative;
+        margin-right: -490px;
+    }
+
+    .owl-dots {
+        display: none;
+    }
+    .owl-nav {
+        position: absolute;
+        bottom: -7px;
+        display: flex;
+        justify-content: space-between;
+        .owl-prev,.owl-next{
+            width: 70px;
+            height: 46px;
+            flex-shrink: 0;
+            border-radius: 30px;
+            border: 1px solid var(--Secondary, #1A1A1A);
+            background: var(--Bg-1, #F9F9FB);
+            text-align: center;
+            line-height: 46px;
+        }
+        .owl-next{
+            position: relative;
+            left: 19px;        
+        }
+    }
+
+    .content-column{
+        .content-block{
+            position: relative;
+            .inner-box{
+                .info-box{
+                    .counter-block {
+                        .inner{
+                            padding: 0px;
+                            .rating{
+                                span{
+                                    color: #E7C873;
+                                    font-size: 10px;
+                                }
+                            }
+                            .count-box {
+                                color: var(--Secondary, #1A1A1A);
+                                font-size: 26px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 36px; /* 138.462% */
+                            }
+                            .counter-title {
+                                color: var(--Text, #3D3E3F);
+                                font-size: 15px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 28px; /* 186.667% */
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Testimonial Block
+
+.testimonial-block {
+    position: relative;
+    padding: 17px 0 0;
+    .inner-box {
+        position: relative;
+        background-color: #fff;
+        padding: 0px 0px 45px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        &:before {
+            position: absolute;
+            right: 37px;
+            top: 27px;
+            width: 44px;
+            height: 44px;
+            background-image: url(../images/icons/dots.svg);
+            content: "";
+        }
+        .text{
+            color: var(--Secondary, #1A1A1A);
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px; /* 168.421% */
+        }
+    }
+
+    .info-box {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        transition: all 300ms ease;
+        padding-left: 88px;
+        margin-bottom: 43px;
+        .thumb {
+            position: absolute;
+            left: 0px;
+            top: -7px;
+            margin-bottom: 0;        
+            img {
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                transition: all 300ms ease;
+            }
+        }
+    }
+
+    .name {
+        color: var(--Secondary, #1A1A1A);
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 147.368% */
+    }
+    .designation {
+        color: var(--Secondary, #1A1A1A);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 186.667% */
+    }
+    .rating{
+        position: relative;
+        color: #ffba25;
+        font-size: 14px;
+        letter-spacing: .05em;
+    }
+}
+

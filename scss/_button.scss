@@ -1,0 +1,106 @@
+
+
+.theme-btn{
+    display:inline-flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    transition:all 0.3s ease;
+}
+
+/*Btn Style One*/
+.btn-style-one{
+    position:relative;
+    padding: 18px 26px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--Primary, #E7C873);
+    background: var(--Primary, #E7C873);
+    color: var(--Secondary, #1A1A1A);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    overflow: hidden;
+    display: in;
+    &:hover {
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+}
+
+
+/*Btn Style two*/
+.btn-style-two{
+    position:relative;
+    font-size:14px;
+    line-height:30px;
+    color:#ffffff;
+    padding: 12px 60px;
+    font-weight: 600;
+    background: var(--bg-theme-color3);
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    overflow: hidden;
+    text-transform: uppercase;
+    &:hover {
+        background-color: var(--bg-theme-color2);
+        color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+}
+
+
+/*Btn Style Three*/
+.btn-style-three {
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 12px 60px;
+    font-weight: 600;
+    background: var(--bg-theme-color1);
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    overflow: hidden;
+    text-transform: uppercase;
+    &:hover {
+        background-color: var(--bg-theme-color2);
+        color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+}
+
+
+/*Btn Style Four*/
+.btn-style-four {
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    color: var(--theme-color1);
+    padding: 12px 60px;
+    font-weight: 600;
+    background: var(--bg-theme-color4);
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.btn-style-four:hover {
+    background-color: var(--bg-theme-color2);
+    color: #ffffff;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    -ms-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    -o-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.theme-btn.small{
+    padding: 10px 40px;
+    line-height: 20px;
+    font-size: 12px;
+}
