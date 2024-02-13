@@ -109,13 +109,13 @@
 	// Testimonial Carousel
 	if ($('.testimonial-carousel').length) {
 		$('.testimonial-carousel').owlCarousel({
-			loop: true,
+			loop: false,
 			margin: 20,
 			nav: true,
 			items: 1,
 			smartSpeed: 700,
 			autoplay: true,
-			navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
+			navText: ['<span><img src="images/icons/angal-left.svg" alt=""></span>', '<span><img src="images/icons/angal-right.png" alt=""></span>'],
 			responsive: {
 				0: {
 					items: 1
@@ -165,7 +165,7 @@
 			items: 1,
 			smartSpeed: 700,
 			autoplay: 5000,
-			navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
+			navText: ['<span> <img src="images/icons/angal-right-w.png" alt=""> </span>', '<span> <img src="images/icons/angal-left-l.png" alt=""> </span>'],
 			responsive: {
 				0: {
 					items: 1
@@ -185,11 +185,11 @@
 
 
 	//Services Carousel
-	if ($('.services-carousel').length) {
-		$('.services-carousel').owlCarousel({
-			loop: true,
+	if ($('.slider-carousel-one').length) {
+		$('.slider-carousel-one').owlCarousel({
+			loop: false,
 			margin: 30,
-			nav: false,
+			nav: true,
 			smartSpeed: 500,
 			autoHeight: true,
 			autoplay: true,
@@ -206,10 +206,10 @@
 					items: 2
 				},
 				1024: {
-					items: 3
+					items: 4
 				},
 				1200: {
-					items: 4
+					items: 5
 				},
 			}
 		});
@@ -329,6 +329,10 @@
 		},{accY: 0});
 	}
 
+
+
+	
+
 	//Accordion Box
 	if ($('.accordion-box').length) {
 		$(".accordion-box").on('click', '.acc-btn', function () {
@@ -431,5 +435,16 @@
 	$(window).on('load', function() {
 		handlePreloader();
 	});	
+
+	//  ============= SIGNIN TAB FUNCTIONALITY =========
+
+    $('.signup-tab ul li').on("click", function(){
+        var tab_id = $(this).attr('data-tab');
+        $('.signup-tab ul li').removeClass('current');
+        $('.dff-tab').removeClass('current');
+        $(this).addClass('current animated fadeIn');
+        $("#"+tab_id).addClass('current animated fadeIn');
+        return false;
+    });
 
 })(window.jQuery);
